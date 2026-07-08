@@ -9,7 +9,15 @@ module.exports = {
     clean: true,
   },
 
-  mode: "production",
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    compress: true,
+    port: 8080,
+    open: true,
+    hot: true,
+  },
 
   module: {
     rules: [
